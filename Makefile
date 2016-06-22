@@ -5,5 +5,5 @@ init:
 	docker pull gibiansky/ihaskell:latest
 
 run:
-	open http://$(shell docker-machine ip default):8888/
+	open http://localhost:8888/
 	docker run -it --volume $(shell pwd):/notebooks --publish 8888:8888 gibiansky/ihaskell:latest
